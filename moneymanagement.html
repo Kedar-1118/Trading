@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Money Tracker</title>
+<style>
+body {
+    margin:0;
+    padding:0;
+   background-color:#E8DAEF;
+
+}
+nav {
+    width:100%;
+    background:black;
+    overflow:auto;
+}
+ul {
+    padding:0;
+    margin:0 0 0 150px;
+    list-style:none;
+}
+li {
+    float:left;
+}
+.logo img {
+    position:absolute;
+    margin-top:4px;
+    margin-left:3px;
+} 
+nav a {
+    width:100px;
+    display:block;
+    padding:20px 15px;
+    text-decoration:none;
+    font-family:Arial;
+    color:#f2f2f2;
+    text-align:center;
+}
+nav a:hover {
+    background:purple;
+    transition:0.5s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(120deg,#6c117e,#82c0f3);
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+        color: #333;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="number"], select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color:purple;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover {
+        background-color: purple;
+    }
+    #balance, #expense {
+        margin-bottom: 20px;
+    }
+    #stock-list {
+        margin-top: 20px;
+    }
+    #stock-list table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    #stock-list th, #stock-list td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        #location{
+            text-decoration: none;
+        }
+</style>
+</head>
+<body>
+<div class="logo">
+    <a href="home3.html"><img src="mm_logo.png"></a>
+</div>
+<nav>
+    <ul>
+        <li><a href="aboutus.html">About Us</a></li>
+               <li class="dropdown">
+            <a href="#" class="dropbtn">Payments</a>
+            <div class="dropdown-content">
+                <a href="MM.html">Home</a>
+                <a href="payments.html">Payments</a>
+                <a href="videos.html">Expert Picks</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Trading</a>
+            <div class="dropdown-content">
+                <a href="dummy.html">Home</a>
+                <a href="watchlist.html">Watchlist</a>
+                <a href="main.html">Your Portfolio</a>
+                <a href="video.html">Expert Picks</a>
+
+
+            </div>
+        </li>
+        <li><a href="moneymanagement.html">Money Tracker</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="Signup.html">Sign Up</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <h1>Money Tracker</h1>
+    <h2>Balance</h2>
+    <div id="balance">₹1000</div>
+    <label for="add-balance">Add Balance:</label>
+    <input type="number" id="add-balance">
+    <button onclick="addBalance()">Add Balance</button>
+
+    <h2>Expenses</h2>
+    <label for="expense">Reduce Expense:</label>
+    <input type="number" id="expense">
+    <button onclick="reduceExpense()">Reduce Expense</button>
+
+    <h2>Stocks</h2>
+    <label for="stock-name">Stock Name:</label>
+    <input type="text" id="stock-name">
+    <label for="bought-amount">Bought Amount:</label>
+    <input type="number" id="bought-amount">
+    <label for="options">Options:</label>
+    <select id="options">
+        <option value="Hold">Hold</option>
+        <option value="Sell">Sell</option>
+    </select>
+    <button onclick="manageStock()">Manage Stock</button>
+
+    <div id="stock-list">
+        <h2>Stocks History</h2>
+        <table>
+            <tr>
+                <th>Stock Name</th>
+                <th>Bought Amount</th>
+                <th>Options</th>
+            </tr>
+            <tr>
+                <td>Apple Inc.</td>
+                <td>10</td>
+                <td>Hold</td>
+            </tr>
+            <tr>
+                <td>Microsoft Corporation</td>
+                <td>20</td>
+                <td>Sell</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    let balance = 1000; // Initial balance
+    let stockHistory = []; // Initially, there's no history
+
+    function addBalance() {
+        const addAmount = parseFloat(document.getElementById("add-balance").value);
+        if (!isNaN(addAmount)) {
+            balance += addAmount;
+            updateBalance();
+        }
+    }
+
+    function reduceExpense() {
+        const expense = parseFloat(document.getElementById("expense").value);
+        if (!isNaN(expense)) {
+            balance -= expense;
+            updateBalance();
+        }
+    }
+
+    function manageStock() {
+        const stockName = document.getElementById("stock-name").value;
+        const boughtAmount = parseFloat(document.getElementById("bought-amount").value);
+        const option = document.getElementById("options").value;
+
+        // Assuming you will have some validation here to ensure stockName and boughtAmount are not empty and valid
+
+        // Here, you might perform actions based on the selected option (Hold or Sell)
+        // For demonstration purposes, let's just add the transaction to the stockHistory array
+        const transaction = {
+            stockName: stockName,
+            boughtAmount: boughtAmount,
+            option: option
+        };
+        stockHistory.push(transaction);
+
+        // After adding the transaction, update the stock list
+        updateStockList();
+    }
+
+    function updateBalance() {
+        document.getElementById("balance").innerText = "Balance: $" + balance.toFixed(2);
+    }
+
+    function updateStockList() {
+        const table = document.getElementById("stock-list").getElementsByTagName('table')[0];
+        const tbody = table.getElementsByTagName('tbody')[0];
+
+        // Clear the table body before updating
+        tbody.innerHTML = "";
+
+        // Loop through stockHistory array and populate the table
+        stockHistory.forEach(transaction => {
+            const row = tbody.insertRow();
+            const nameCell = row.insertCell(0);
+            const amountCell = row.insertCell(1);
+            const optionCell = row.insertCell(2);
+
+            nameCell.innerText = transaction.stockName;
+            amountCell.innerText = transaction.boughtAmount;
+            optionCell.innerText = transaction.option;
+        });
+    }
+
+    // Initially update the balance
+    updateBalance();
+</script>
+<footer>
+        <div style="position: relative; overflow: hidden; width: 100%; height: 100px;">
+            <a id="location" href="https://www.google.com/maps/place/Walchand+College+of+Engineering/@16.8457438,74.5988826,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc1237f52c65db5:0xa3535676176ded0a!8m2!3d16.8457387!4d74.6014575!16zL20vMDVoZG5q?entry=ttu"><h3>Based at WCE Sangli.</h3></a>
+        </div>
+        <p>&copy; 2024 Trading Website</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">X</a>
+            <a href="#">Linkedin</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eaeaea;
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden;
+    background: linear-gradient(120deg, #ece8f7, #d9f4ff);;  
+    
+
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 400px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+}
+
+.container .slide .item{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: relative;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}
+/* header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            
+        }
+        nav {
+            background-color: #000; 
+            padding: 20px 0; 
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            display: inline-block; 
+            vertical-align: middle; 
+        }
+        nav a:hover {
+            background-color: purple;
+        } */
+
+        .main-div {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin-top:500px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 2px solid #030303;
+            position:relative;
+            margin-left:125px;
+            background-color:#020202 ;
+            
+        }
+        .main-div2 {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            /* margin-top:450px; */
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            position:relative;
+            margin-left:125px;
+            background-color:#0c0c0c ;
+            
+        }
+
+        .column {
+            flex-basis: 30%;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        #location{
+            text-decoration: none;
+        }
+        
+
+        nav {
+    width:100%;
+    background:black;
+    overflow:auto;
+}
+ul {
+    padding:0;
+    margin:0 0 0 150px;
+    list-style:none;
+}
+li {
+    float:left;
+}
+.logo img {
+    position:absolute;
+    margin-top:4px;
+    margin-left:3px;
+} 
+nav a {
+    width:100px;
+    display:block;
+    padding:20px 15px;
+    text-decoration:none;
+    font-family:Arial;
+    color:#f2f2f2;
+    text-align:center;
+}
+nav a:hover {
+    background:purple;
+    transition:0.5s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* #bulltrap{
+    color: #000;
+}
+#Bulltrap{
+    color: #000;
+}
+        
+#Stock{
+    color: #000;
+}
+#stock2{
+    color: #000;
+}
+#Bearbull{
+    color: #000;
+ }
+#bearbull{
+    color: #000;
+ } */
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="home3.html"><img src="mm_logo.png"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+                   <li class="dropdown">
+                <a href="#" class="dropbtn">Payments</a>
+                <div class="dropdown-content">
+                    <a href="MM.html">Home</a>
+                    <a href="payments.html">Payments</a>
+                    <a href="videos.html">Videos</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Trading</a>
+                <div class="dropdown-content">
+                    <a href="dummy.html">Home</a>
+                    <a href="watchlist.html">Watchlist</a>
+                    <a href="main.html">Your Portfolio </a>
+                    <a href="video.html">Expert Picks</a>
+                </div>
+            </li>
+            <li><a href="moneymanagement.html">Money Tracker</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="Signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+    <div class="container">
+        
+
+        <div class="slide">
+
+            
+            <div class="item" style="background-image:url(Homeslide.jpg)">
+                <div class="content">
+                    <div class="name">Accessibility:</div>
+                    <div class="des">Anytime, Anywhere Payments Made Easy.</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Homeslide2.jpg);">
+                <div class="content">
+                    <div class="name" id="Stock">Stock Analysis:</div>
+                    <div class="des" id="stock2">Navigate the Markets with Confidence.</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Homeslide4.jpg);">
+                <div class="content">
+                    <div class="name">Payment Network:</div>
+                    <div class="des">Simplify Your Payments Experience with Our Network.</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Homeslide3.jpg);">
+                <div class="content">
+                    <div class="name" id="Bearbull">Bear vs Bull :</div>
+                    <div class="des" id="bearbull">Bear drops, Bull rises.</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(home5.jpg);">
+                <div class="content">
+                    <div class="name">Data Privacy:</div>
+                    <div class="des">Guarding Your Online Presence.</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Homeslide6\(2\).jpg);">
+                <div class="content">
+                    <div class="name" id="bulltrap"> Bull Trap :</div>
+                    <div class="des" id="Bulltrap">Learn what is "Bull Trap"</div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+    <br>
+    <div class="main-div">
+        <div class="column">
+            <h2><strong>User-Friendly Interface:</strong></h2>
+            <p>User-friendly interface of website helps in  intuitive navigation, clear instructions, and minimal steps required to complete transactions. </p>
+        </div>
+        <div class="column">
+            <h2><strong>Financial Profiling:</strong></h2>
+            <p>Personalised recommendation based on current trends.</p>
+        </div>
+        <div class="column">
+            <h2><strong>Secure Authentication:</strong></h2>
+            <p>Implemented strong authentication mechanisms to verify the identity of users before allowing them to access sensitive functions or perform transactions on the website. </p>
+        </div>
+    </div><br><br><br><br>
+
+
+    <div class="main-div2">
+        <div class="column">
+            <h2><strong>Technical Analysis:</strong></h2>
+            <p>Technical analysis involves analyzing historical price data and volume to forecast future price movements.  </p>
+        </div>
+        <div class="column">
+            <h2><strong>Access to Global Markets:</strong></h2>
+            <p>Explore diverse investment opportunities across global markets, including stocks, forex, commodities, and cryptocurrencies.</p>
+        </div>
+        <div class="column">
+            <h2><strong>Advanced Analysis Tools:</strong></h2>
+            <p>Utilize cutting-edge analysis tools and indicators to conduct in-depth technical and fundamental analysis.</p>
+        </div>
+    </div><br><br><br><br>
+    
+
+    <script>
+        let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) 
+})
+    </script>
+    <footer>
+        <div style="position: relative; overflow: hidden; width: 100%; height: 100px;">
+            <a id="location" href="https://www.google.com/maps/place/Walchand+College+of+Engineering/@16.8457438,74.5988826,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc1237f52c65db5:0xa3535676176ded0a!8m2!3d16.8457387!4d74.6014575!16zL20vMDVoZG5q?entry=ttu"><h3>Based at WCE Sangli.</h3></a>
+        </div>
+        <p>&copy; 2024 Trading Website</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">X</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin:0;
+    padding:0;
+    background:gray;
+}
+nav {
+    width:100%;
+    background:black;
+    overflow:auto;
+}
+ul {
+    padding:0;
+    margin:0 0 0 150px;
+    list-style:none;
+}
+li {
+    float:left;
+}
+.logo img {
+    position:absolute;
+    margin-top:4px;
+    margin-left:3px;
+} 
+nav a {
+    width:100px;
+    display:block;
+    padding:20px 15px;
+    text-decoration:none;
+    font-family:Arial;
+    color:#f2f2f2;
+    text-align:center;
+}
+nav a:hover {
+    background:purple;
+    transition:0.5s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    box-sizing:border-box;
+}
+body{
+    background: linear-gradient(120deg,#6c117e,#82c0f3);
+}
+.timeline{
+    position:relative;
+    max-width:1200px;
+    margin:100px auto;
+}
+.container{
+    padding:10px 50px;
+    position:relative;
+    width:50%;
+    
+    animation:movedown 1s linear forwards;
+    opacity:0;
+}
+@keyframes movedown{
+    0%{
+        opacity:1;
+        transform:translateY(-30px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+.container:nth-child(1){
+    animation-delay:0s;
+}
+.container:nth-child(2){
+    animation-delay:1s;
+}
+.container:nth-child(3){
+    animation-delay:2s;
+}
+.container:nth-child(4){
+    animation-delay:3s;
+}
+.container:nth-child(5){
+    animation-delay:4s;
+}
+.container:nth-child(6){
+    animation-delay:5s;
+}
+.text-box{
+    padding:20px 30px;
+    background:#fff;
+    position:relative;
+    border-radius:6px;
+    font-size:15px;
+}
+.left-container{
+    left:0;
+}
+.right-container{
+    left:50%;
+}
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:6px;
+    height:100%;
+    background:#fff;
+    top:0;
+    left:50%;
+    margin-left:-3px;
+    z-index:-1;
+    animation: moveline 6s linear forwards;
+}
+@keyframes moveline{
+    0%{
+        height:0;
+    }
+    100%{
+        height:100%;
+    }
+}
+.text-box h2{
+    font-weight:600;
+}
+.text-box small{
+    display:inline-block;
+    margin-bottom:15px;
+}
+.left-container-arrow{
+    height:0;
+    width:0;
+    position:absolute;
+    top:28px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+  border-left:15px solid  #fff;
+    right:-15px;   
+
+}
+.right-container-arrow{
+    height:0;
+    width:0;
+    position:absolute;
+    top:28px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-right:15px solid #fff;
+    left:-15px;
+
+}
+@media screen and (max-width:600px){
+    .timeline{
+        margin:50px auto;
+    }
+    .timeline::after{
+        left:31px;
+    }
+    .container{
+        width:100%;
+        padding-left:80px;
+        padding-right:25px;
+    }
+    .text-box small{
+        margin-bottom:10px;
+    }
+    .right-container{
+        left:0;
+    }
+    .left-container-arrow,.right-container-arrow{
+        border-right:15px solid #fff;
+        border-left:0;
+        left:-15px;
+    }
+}
+
+footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        #location{
+            text-decoration: none;
+        }
+</style>
+</head>
+<body>
+<div class="logo">
+    <a href="home3.html"><img src="mm_logo.png"></a>
+</div>
+<nav>
+    <ul>
+        <li><a href="aboutus.html">About Us</a></li>
+               <li class="dropdown">
+            <a href="#" class="dropbtn">Payments</a>
+            <div class="dropdown-content">
+                <a href="MM.html">Home</a>
+                <a href="payments.html">Payments</a>
+                <a href="videos.html">Expert Picks</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Trading</a>
+            <div class="dropdown-content">
+                <a href="dummy.html">Home</a>
+                <a href="watchlist.html">Watchlist</a>
+                <a href="main.html">Your Portfolio</a>
+                <a href="video.html">Expert Picks</a>
+
+            </div>
+        </li>
+        <li><a href="moneymanagement.html">Money Tracker</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="Signup.html">Sign Up</a></li>
+    </ul>
+</nav>
+    <div class="timeline">
+        <div class="container left-container">
+            <div class="text-box">
+                <h2>Unified User Interface</h2>
+                  <p>A unified user interface for payments streamlines the payment process by consolidating various payment methods. </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <h2>Payment Options</h2>
+              
+                <p>Payment options encompass various methods through which users can complete transactions on a platform.</p>
+                <span class="right-container-arrow"></span>
+
+            </div>
+        </div>
+    
+
+        <div class="container left-container">
+            <div class="text-box">
+                <h2>Security Measures</h2>
+             
+                <p>Security measures are paramount in any payment system to protect sensitive user information and prevent fraudulent activities.</p>
+                <span class="left-container-arrow"></span>
+
+            </div>
+        </div>
+    
+    
+        <div class="container right-container">
+            <div class="text-box">
+                <h2>Expert Picks</h2>
+           
+                <p>Video updates in the context of payment systems typically refer to the dissemination of relevant information. </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <div class="text-box">
+                <h2>Real-Time Transactions</h2>
+           
+                <p>Real-time transactions refer to payment processes that occur instantly or near-instantly, with minimal delay between initiation and completion. </p>
+                <span class="left-container-arrow"></span>
+
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <h2>Customer Support</h2>
+             
+                <p>Customer support in payment systems is essential for addressing user inquiries and resolving issues related to payment processes, transactions, and account management. </p>
+                <span class="right-container-arrow"></span>
+
+            </div>
+        </div>
+    </div>
+<footer>
+        <div style="position: relative; overflow: hidden; width: 100%; height: 100px;">
+            <a id="location" href="https://www.google.com/maps/place/Walchand+College+of+Engineering/@16.8457438,74.5988826,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc1237f52c65db5:0xa3535676176ded0a!8m2!3d16.8457387!4d74.6014575!16zL20vMDVoZG5q?entry=ttu"><h3>Based at WCE Sangli.</h3></a>
+        </div>
+        <p>&copy; 2024 Trading Website</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">X</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer></body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid of Images and Text</title>
+<style>
+body {
+    margin:0;
+    padding:0;
+    background:gray;
+}
+nav {
+    width:100%;
+    background:black;
+    overflow:auto;
+}
+ul {
+    padding:0;
+    margin:0 0 0 150px;
+    list-style:none;
+}
+li {
+    float:left;
+}
+.logo img {
+    position:absolute;
+    margin-top:4px;
+    margin-left:3px;
+} 
+nav a {
+    width:100px;
+    display:block;
+    padding:20px 15px;
+    text-decoration:none;
+    font-family:Arial;
+    color:#f2f2f2;
+    text-align:center;
+}
+nav a:hover {
+    background:purple;
+    transition:0.5s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.container {
+    background-color: #dadde3;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px;
+}
+
+/* Grid styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    padding: 40px;
+}
+
+.grid-item {
+    text-align: center;
+    background-color: #cccccc; 
+    padding: 20px;
+    border-radius: 20px;
+    width: 180px;
+}
+
+.grid-item img {
+    max-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: purple;
+}
+
+h2 {
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#location {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .logo img {
+        margin-left: 0;
+    }
+    
+    nav {
+        text-align: center;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        display: inline-block;
+    }
+    
+    nav a {
+        width: auto;
+        padding: 10px;
+    }
+    
+    .container {
+        margin: 10px;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the column width */
+        padding: 20px;
+    }
+    
+    .grid-item {
+        width: 140px; /* Adjust the item width */
+    }
+}
+
+    </style>
+</head>
+<body>
+<div class="logo">
+    <a href="home3.html"><img src="mm_logo.png"></a>
+</div>
+<nav>
+    <ul>
+        <li><a href="aboutus.html">About Us</a></li>
+               <li class="dropdown">
+            <a href="#" class="dropbtn">Payments</a>
+            <div class="dropdown-content">
+                <a href="MM.html">Home</a>
+                <a href="payments.html">Payments</a>
+                <a href="videos.html">Expert Picks</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Trading</a>
+            <div class="dropdown-content">
+                <a href="dummy.html">Home</a>
+                <a href="watchlist.html">Watchlist</a>
+                <a href="main.html">Your Portfolio</a>
+                <a href="video.html">Expert Picks</a>
+
+            </div>
+        </li>
+        <li><a href="moneymanagement.html">Money Tracker</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="Signup.html">Sign Up</a></li>
+    </ul>
+</nav>
+
+
+
+<br><br>
+<div class="container">
+<h2>TRANSFER MONEY ></h2>
+<div class="grid-container" style="padding-left: 260px;">
+  <div class="grid-item">
+   <a href="to contacts.html"> <img src="p1.png" alt="Image 1">
+    <p>Transfer to Contacts</p></a>
+  </div>
+
+  <div class="grid-item">
+   <a href="to bank.html"> <img src="p2.png" alt="Image 2">
+    <p>Transfer to Bank</p></a>
+  </div>
+
+  <div class="grid-item">
+   <a href="balance.html"> <img src="p3.png" alt="Image 2">
+    <p>Bank Balance</p></a>
+  </div> 
+</div>
+</div>
+
+
+
+
+<div class="container">
+<h2>BILL PAYMENT ></h2>
+<div class="grid-container" style="padding-left: 170px;">
+     <div class="grid-item">
+   <a href="recharge.html"> <img src="p4.png" alt="Image 2">
+    <p>Mobile Recharge</p></a>
+  </div>
+
+ <div class="grid-item">
+   <a href="dth.html"> <img src="p5.png" alt="Image 2">
+    <p>DTH</p></a>
+  </div>
+
+ <div class="grid-item">
+   <a href="Electricity.html"> <img src="p6.png" alt="Image 2">
+    <p>Electricity</p></a>
+  </div>
+
+ <div class="grid-item">
+   <a href="Rent Payment.html"> <img src="p7.png" alt="Image 2">
+    <p>Rent Payment</p></a>
+  </div>
+
+
+
+ <div class="grid-item">
+   <a href="Loan Payment.html"> <img src="p8.png" alt="Image 2">
+    <p>Loan Payment</p></a>
+  </div>
+
+ <div class="grid-item">
+   <a href="BikeIns.html"> <img src="p9.png" alt="Image 2">
+    <p>Bike Insurance</p></a>
+  </div>
+
+ <div class="grid-item">
+    <a href="Health Ins.html"><img src="p10.png" alt="Image 2">
+    <p>Health Insurance</p></a>
+  </div>
+
+ <div class="grid-item">
+  <a href="termlife.html">  <img src="p11.png" alt="Image 2">
+    <p>Term Life</p></a>
+  </div>
+
+
+
+
+
+  <div class="grid-item">
+    <a href="accident.html">  <img src="p12.png" alt="Image 2">
+      <p>Accident Insurance</p></a>
+    </div>
+
+    <div class="grid-item">
+      <a href="gas cyl.html"> <img src="p15.png" alt="Image 2">
+       <p>Book a Cylinder</p></a>
+     </div>
+
+
+     <div class="grid-item">
+      <a href="insurance.html"> <img src="p16.png" alt="Image 2">
+       <p>LIC</p></a>
+     </div>
+
+</div>
+</div>
+
+
+<div class="container">
+  <h2>BOOKING ></h2><br>
+<div class="grid-container" style="margin-left: 400px;margin-right: 200px">
+ 
+
+ <div class="grid-item" >
+   <a href="hotel.html"> <img src="p13.png" alt="Image 2">
+    <p>Hotel Booking</p></a>
+  </div>
+
+ <div class="grid-item">
+   <a href="flight.html"> <img src="p14.png" alt="Image 2">
+    <p>Flight Booking</p></a>
+  </div>
+
+</div>
+</div>
+
+
+<div class="container">
+  <h2>DONATION ></h2>
+  <div class="grid-container">
+ <div class="grid-item">
+   <a href="donate.html"> <img src="p17.png" alt="Image 2">
+    <p>Donate</p></a>
+  </div> 
+
+<div class="grid-item">
+   <a href="flood.html"> <img src="p18.png" alt="Image 2">
+    <p>Flood Donation</p></a>
+  </div>
+
+ <div class="grid-item">
+   <a href="girl edu.html"> <img src="p19.png" alt="Image 2">
+    <p>Girl Child Education</p></a>
+  </div>
+
+ <div class="grid-item">
+   <a href="meal.html"> <img src="p20.png" alt="Image 2">
+    <p>Donate Meals</p></a>
+  </div>
+</div>
+</div>
+
+<footer>
+  <div style="position: relative; overflow: hidden; width: 100%; height: 100px;">
+      <a id="location" href="https://www.google.com/maps/place/Walchand+College+of+Engineering/@16.8457438,74.5988826,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc1237f52c65db5:0xa3535676176ded0a!8m2!3d16.8457387!4d74.6014575!16zL20vMDVoZG5q?entry=ttu"><h3>Based at WCE Sangli.</h3></a>
+  </div>
+  <p>&copy; 2024 Trading Website</p>
+  <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">X</a>
+      <a href="#">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>

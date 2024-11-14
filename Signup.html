@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<style>
+body {
+    margin:0;
+    padding:0;
+   background-color:#E8DAEF;
+
+}
+nav {
+    width:100%;
+    background:black;
+    overflow:auto;
+}
+ul {
+    padding:0;
+    margin:0 0 0 150px;
+    list-style:none;
+}
+li {
+    float:left;
+}
+.logo img {
+    position:absolute;
+    margin-top:4px;
+    margin-left:3px;
+} 
+nav a {
+    width:100px;
+    display:block;
+    padding:20px 15px;
+    text-decoration:none;
+    font-family:Arial;
+    color:#f2f2f2;
+    text-align:center;
+}
+nav a:hover {
+    background:purple;
+    transition:0.5s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+</style>
+
+
+<body>
+<div class="logo">
+    <a href="home3.html"><img src="mm_logo.png"></a>
+</div>
+<nav>
+    <ul>
+       <li><a href="aboutus.html">About Us</a></li>
+               <li class="dropdown">
+            <a href="#" class="dropbtn">Payments</a>
+            <div class="dropdown-content">
+                <a href="MM.html">Home</a>
+                <a href="payments.html">Payments</a>
+                <a href="videos.html">Expert Picks</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Trading</a>
+            <div class="dropdown-content">
+                <a href="dummy.html">Home</a>
+                <a href="watchlist.html">Watchlist</a>
+                <a href="main.html">Your Portfolio</a>
+                <a href="video.html">Expert Picks</a>
+
+            </div>
+        </li>
+        <li><a href="moneymanagement.html">Money Tracker</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="Signup.html">Sign Up</a></li>
+    </ul>
+</nav>
+
+
+    <div class="center">
+        <h1>SignUp</h1>
+        <form method="post">
+           <div class="txt_field">
+            <input type="text" required>
+            <span></span>
+            <label>Username</label>
+           </div>
+           <div class="txt_field">
+            <input type="password" required>
+            <span></span>
+            <label>Password</label>
+           </div>
+           <div class="txt_field">
+            <input type="password" required>
+            <span></span>
+            <label>Confirm Password</label>
+           </div>
+           
+           <input type="submit" value="SignUp">
+           <div class="signup_link">
+             Already a member? <a href="index.html">Login</a>
+           </div>
+        </form>
+    </div>
+</body>
+</html>

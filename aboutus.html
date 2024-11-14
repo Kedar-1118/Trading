@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+body {
+    margin:0;
+    padding:0;
+   background-color:#E8DAEF;
+
+}
+nav {
+    width:100%;
+    background:black;
+    overflow:auto;
+}
+ul {
+    padding:0;
+    margin:0 0 0 150px;
+    list-style:none;
+}
+li {
+    float:left;
+}
+.logo img {
+    position:absolute;
+    margin-top:4px;
+    margin-left:3px;
+} 
+nav a {
+    width:100px;
+    display:block;
+    padding:20px 15px;
+    text-decoration:none;
+    font-family:Arial;
+    color:#f2f2f2;
+    text-align:center;
+}
+nav a:hover {
+    background:purple;
+    transition:0.5s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+p{
+    color: purple;
+    font-size: large;
+    text-align: center;
+    scale: 1.2;
+    margin-bottom: 50px;
+    font-family: Arial;
+}
+p1{
+    color: black;
+    text-align: center;
+    scale: 1.2;
+    margin-bottom: 50px;
+    font-family: Arial;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container {
+  display: flex;
+  width: 100%;
+  padding: 1% 1%;
+  box-sizing: border-box;
+  height: 60vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 8vh);
+  object-fit: cover;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 5vh;
+}
+
+.containerr{
+    margin:10px;
+    padding:20px;
+    background-color:#D7BDE2 ;
+border-radius:5px;
+}
+
+ footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        #location{
+            text-decoration: none;
+        }
+</style>
+</head>
+<body>
+<div class="logo">
+    <a href="home3.html"><img src="mm_logo.png"></a>
+</div>
+<nav>
+    <ul>
+        <li><a href="aboutus.html">About Us</a></li>
+               <li class="dropdown">
+            <a href="#" class="dropbtn">Payments</a>
+            <div class="dropdown-content">
+                <a href="MM.html">Home</a>
+                <a href="payments.html">Payments</a>
+                <a href="videos.html">Expert Picks</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Trading</a>
+            <div class="dropdown-content">
+                <a href="dummy.html">Home</a>
+                <a href="watchlist.html">Watchlist</a>
+                <a href="main.html">Your Portfolio</a>
+                <a href="video.html">Expert Picks</a>
+
+            </div>
+        </li>
+        <li><a href="moneymanagement.html">Money Tracker</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="Signup.html">Sign Up</a></li>
+    </ul>
+</nav>
+<br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="image1.png" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="Image2.png" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="Image3.png" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="Image5.png" style="width:100%">
+  
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+ 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<br><br>
+<p><b>To offer every Indian equal opportunity to accelerate their progress by unlocking<br> the flow of money and access to services</b></p>
+<div class="containerr">
+<p1>
+    Welcome to MoneyMint, your reliable and secure online payment solution. At MoneyMint, we understand the importance of seamless transactions in today's fast-paced digital world. Whether you're an individual or a business person, we're here to simplify your payment processes and provide you with peace of mind.
+<br><br>
+Our mission is to empower individuals and businesses by offering a convenient, transparent, and efficient platform for sending and receiving payments. With our user-friendly interface and robust security measures, you can trust MoneyMint to handle your transactions with the utmost care and professionalism.
+<br><br>
+At MoneyMint, we believe in innovation and continuous improvement. We are constantly exploring new technologies and features to enhance your experience and stay ahead of the<br> curve in the rapidly evolving payment industry.
+</p1>
+</div>
+<br><br><br><br>
+<p><b>Our Founders</b></p>
+<div class="container">
+    <div class="box">
+      <img src="srushti.jpg"><br>
+      <span>CEO</span>
+      <span>Srushti Garad</span>
+    </div>
+    <div class="box">
+      <img src="swarya.jpg">
+      <span>CMO</span>
+      <span>Swarangi Toraskar</span>
+    </div>
+    <div class="box">
+      <img src="alok.jpg">
+      <span>MD & CFO</span>
+      <span>Alok Kulkarni</span>
+    </div>
+    <div class="box">
+      <img src="kd.jpg">
+      <span>CTO</span>
+      <span>Kedar Dhotre</span>
+    </div>
+  </div>
+<br><br>
+ <footer>
+        <div style="position: relative; overflow: hidden; width: 100%; height: 100px;">
+            <a id="location" href="https://www.google.com/maps/place/Walchand+College+of+Engineering/@16.8457438,74.5988826,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc1237f52c65db5:0xa3535676176ded0a!8m2!3d16.8457387!4d74.6014575!16zL20vMDVoZG5q?entry=ttu"><h3>Based at WCE Sangli.</h3></a>
+        </div>
+        <p>&copy; 2024 Trading Website</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">X</a>
+            <a href="#">Linkedin</a>
+        </div>
+    </footer> 
+</body>
+</html>

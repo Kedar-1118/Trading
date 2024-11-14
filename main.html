@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+nav {
+    width:100%;
+    background:black;
+    overflow:auto;
+}
+ul {
+    padding:0;
+    margin:0 0 0 150px;
+    list-style:none;
+}
+li {
+    float:left;
+}
+.logo img {
+    position:absolute;
+    margin-top:4px;
+    margin-left:3px;
+} 
+nav a {
+    width:100px;
+    display:block;
+    padding:20px 15px;
+    text-decoration:none;
+    font-family:Arial;
+    color:#f2f2f2;
+    text-align:center;
+}
+nav a:hover {
+    background:purple;
+    transition:0.5s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+        .head{
+          border-radius: 5px;
+          background-color: grey;
+        }
+        
+        
+                body {
+                    background-color: black;
+                    color: var(--text-color);
+                    transition: background-color 0.3s ease, color 0.3s ease;
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                   
+                }
+        
+               
+                .container1{
+                background-color: rgb(172, 172, 172);
+                color: white;
+                border-radius: 20px;
+                height: 1560px;
+                width: 96%; 
+                padding: 10px;
+                margin-left: 8%;
+                margin-right: 40px;
+                margin-top: 10px; 
+                margin-bottom: 30px;
+                display: grid;
+                grid-template-columns: 2;
+                }
+                .container2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 2%;
+            height:150px;
+            width: 620px;
+            border-radius: 20px;
+            background-color: rgb(240, 227, 204);
+            text-decoration: none;
+            animation-name: slideIn;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-80px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+                h2{
+                    color: black;
+                    margin-left: 20px;
+                    float: left;
+                }
+                green{
+                    color: rgb(74, 232, 74);
+                }
+                red{
+                    color: red;
+                }
+                .container4 {
+                    text-decoration-line: none;
+                    max-width: 600px;
+                    margin: 50px auto;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+                h1, h2, p {
+                    margin: 0;
+                    padding: 0;
+                }
+                .stock-info {
+                    margin-top: 20px;
+                }
+                a{
+                    text-decoration: none;
+                }
+                footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        #location{
+            text-decoration: none;
+        }
+
+
+</style>
+
+</head>
+<body>
+    <div class="logo">
+        <a href="#"><img src="mm_logo.png"></a>
+    </div>
+    <div class="logo">
+        <a href="home3.html"><img src="mm_logo.png"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+                   <li class="dropdown">
+                <a href="#" class="dropbtn">Payments</a>
+                <div class="dropdown-content">
+                    <a href="MM.html">Home</a>
+                    <a href="payments.html">Payments</a>
+                    <a href="videos.html">Videos</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Trading</a>
+                <div class="dropdown-content">
+                    <a href="dummy.html">Home</a>
+                    <a href="watchlist.html">Watchlist</a>
+                    <a href="main.html">Your Portfolio </a>
+                    <a href="video.html">Expert Picks</a>
+                </div>
+            </li>
+            <li><a href="moneymanagement.html">Money Tracker</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="Signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+<div align="center">
+
+<h1 style="color: rgb(28, 233, 38);">USER PORTFOLIO</h1>
+<div class="container1" style="margin-left: 30px;margin-right: 0px;">
+<h1 align="center" style="text-decoration: dashed; ">Holdings</h1>
+<a href="AppleTradechart.html"><div class="container2" align="center">
+    <h2>APPLE INC ></h2>
+    
+   <p class="p1">
+    <script>
+        $(document).ready(function(){
+           
+            var apiKey = 'YOUR_API_KEY';
+            var symbol = 'AAPL';
+
+            
+            $.ajax({
+                url: 'https://www.alphavantage.co/query',
+                data: {
+                    function: 'GLOBAL_QUOTE',
+                    symbol: symbol,
+                    apikey: apiKey
+                },
+                success: function(response) {
+                    if (response['Global Quote']) {
+                        var globalQuote = response['Global Quote'];
+                        $('#current-price').text('$' + globalQuote['05. price']);
+                        $('#market-cap').text(globalQuote['06. market cap']);
+                        $('#latest-trading-day').text(globalQuote['07. latest trading day']);
+                        $('#day-high').text('$' + globalQuote['03. high']);
+                        $('#day-low').text('$' + globalQuote['04. low']);
+                    } else {
+                        $('#current-price').text('N/A');
+                        $('#market-cap').text('N/A');
+                        $('#latest-trading-day').text('N/A');
+                        $('#day-high').text('N/A');
+                        $('#day-low').text('N/A');
+                    }
+                },
+                error: function() {
+                    $('#current-price').text('Error');
+                    $('#market-cap').text('Error');
+                    $('#latest-trading-day').text('Error');
+                    $('#day-high').text('Error');
+                    $('#day-low').text('Error');
+                }
+            });
+        });
+    </script>
+    <h2><span id="current-price">Loading...</span></h2><br><br><br><br>
+    <p>Latest Trading Day: <span id="latest-trading-day">Loading...</span></p>
+    <p>Day High: <span id="day-high">Loading...</span></p>
+    <p>Day Low: <span id="day-low">Loading...</span></p></p>
+</div></a>
+<a href="AmazonTradechart.html">
+<div class="container2" align="center">
+    <h2>Amazon ></h2>
+    
+   <p class="p1">
+    <script>
+        $(document).ready(function(){
+            
+            var apiKey = 'YOUR_API_KEY';
+            var symbol = 'AMZN';
+
+           
+            $.ajax({
+                url: 'https://www.alphavantage.co/query',
+                data: {
+                    function: 'GLOBAL_QUOTE',
+                    symbol: symbol,
+                    apikey: apiKey
+                },
+                success: function(response) {
+                    if (response['Global Quote']) {
+                        var globalQuote = response['Global Quote'];
+                        $('#current-price1').text('$' + globalQuote['05. price']);
+                        $('#market-cap1').text(globalQuote['06. market cap']);
+                        $('#latest-trading-day1').text(globalQuote['07. latest trading day']);
+                        $('#day-high1').text('$' + globalQuote['03. high']);
+                        $('#day-low1').text('$' + globalQuote['04. low']);
+                    } else {
+                        $('#current-price1').text('N/A');
+                        $('#market-cap1').text('N/A');
+                        $('#latest-trading-day1').text('N/A');
+                        $('#day-high1').text('N/A');
+                        $('#day-low1').text('N/A');
+                    }
+                },
+                error: function() {
+                    $('#current-price1').text('Error');
+                    $('#market-cap1').text('Error');
+                    $('#latest-trading-day1').text('Error');
+                    $('#day-high1').text('Error');
+                    $('#day-low1').text('Error');
+                }
+            });
+        });
+    </script>
+    <h2><span id="current-price1">Loading...</span></h2><br><br><br><br>
+    <p>Latest Trading Day: <span id="latest-trading-day1">Loading...</span></p>
+    <p>Day High: <span id="day-high1">Loading...</span></p>
+    <p>Day Low: <span id="day-low1">Loading...</span></p></p>
+   </p>
+</div>
+</a>
+<a href="TeslaTradechart.html">
+<div class="container2" align="center">
+    <h2>Tesla ></h2>
+    <script>
+        $(document).ready(function(){
+           
+            var apiKey = 'YOUR_API_KEY';
+            var symbol = 'TSLA';
+
+            
+            $.ajax({
+                url: 'https://www.alphavantage.co/query',
+                data: {
+                    function: 'GLOBAL_QUOTE',
+                    symbol: symbol,
+                    apikey: apiKey
+                },
+                success: function(response) {
+                    if (response['Global Quote']) {
+                        var globalQuote = response['Global Quote'];
+                        $('#current-price2').text('$' + globalQuote['05. price']);
+                        $('#latest-trading-day2').text(globalQuote['07. latest trading day']);
+                        $('#day-high2').text('$' + globalQuote['03. high']);
+                        $('#day-low2').text('$' + globalQuote['04. low']);
+                    } else {
+                        $('#current-price2').text('N/A');
+                        $('#latest-trading-day2').text('N/A');
+                        $('#day-high2').text('N/A');
+                        $('#day-low2').text('N/A');
+                    }
+                },
+                error: function() {
+                    $('#current-price2').text('Error');
+                    $('#latest-trading-day2').text('Error');
+                    $('#day-high2').text('Error');
+                    $('#day-low2').text('Error');
+                }
+            });
+        });
+    </script>
+    <h2><span id="current-price2">Loading...</span></h2><br><br><br><br>
+            <p>Latest Trading Day: <span id="latest-trading-day2">Loading...</span></p>
+            <p>Day High: <span id="day-high2">Loading...</span></p>
+            <p>Day Low: <span id="day-low2">Loading...</span></p>
+    
+   <p class="p1"></green></p>
+</div>
+</a>
+<a href="Coca_cola_tradechart.html">
+<div class="container2" align="center">
+    <h2>TCS ></h2>
+    
+   <p class="p1">
+    <script>
+        $(document).ready(function(){
+           
+            var apiKey = 'YOUR_API_KEY';
+            var symbol = 'KO'; 
+
+           
+            $.ajax({
+                url: 'https://www.alphavantage.co/query',
+                data: {
+                    function: 'GLOBAL_QUOTE',
+                    symbol: symbol,
+                    apikey: apiKey
+                },
+                success: function(response) {
+                    if (response['Global Quote']) {
+                        var globalQuote = response['Global Quote'];
+                        $('#current-price3').text('$' + globalQuote['05. price']);
+                        $('#latest-trading-day3').text(globalQuote['07. latest trading day']);
+                        $('#day-high3').text('$' + globalQuote['03. high']);
+                        $('#day-low3').text('$' + globalQuote['04. low']);
+                    } else {
+                        $('#current-price3').text('N/A');
+                        $('#latest-trading-day3').text('N/A');
+                        $('#day-high3').text('N/A');
+                        $('#day-low3').text('N/A');
+                    }
+                },
+                error: function() {
+                    $('#current-price3').text('Error');
+                    $('#latest-trading-day3').text('Error');
+                    $('#day-high3').text('Error');
+                    $('#day-low3').text('Error');
+                }
+            });
+        });
+    </script>
+
+    <h2><span id="current-price3">Loading...</span></h2><br><br><br><br>
+            <p>Latest Trading Day: <span id="latest-trading-day3">Loading...</span></p>
+            <p>Day High: <span id="day-high3">Loading...</span></p>
+            <p>Day Low: <span id="day-low3">Loading...</span></p>
+   </p>
+</div>
+</a>
+</div>
+
+</div>
+<footer>
+    <div style="position: relative; overflow: hidden; width: 100%; height: 100px;">
+        <a id="location" href="https://www.google.com/maps/place/Walchand+College+of+Engineering/@16.8457438,74.5988826,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc1237f52c65db5:0xa3535676176ded0a!8m2!3d16.8457387!4d74.6014575!16zL20vMDVoZG5q?entry=ttu"><h3>Based at WCE Sangli.</h3></a>
+    </div>
+    <p>&copy; 2024 Trading Website</p>
+    <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">X</a>
+        <a href="#">LinkedIn</a>
+    </div>
+</footer>
+</body>
+</html>
